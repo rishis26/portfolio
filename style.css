@@ -1,0 +1,774 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-color: #000000;
+    --second-bg-color: #000000;
+    --text-color: white;
+    --main-color: #ea580c;
+}
+
+html {
+    font-size: 62.5%; /* Adjusted for better scaling */
+    overflow-x: hidden;
+    scroll-padding-top: 8rem;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4rem 15%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+#menu-icon {
+    font-size: 3.5rem;
+    color: var(--main-color);
+    display: none; /* Use media queries to make this visible for small screens */
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+span {
+    background: linear-gradient(270deg, #df8908 10%, #ff1d15 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+.gradient-btn {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    background: linear-gradient(270deg, #df8908 10%, #ff1d15 100%);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: white;
+    border: none;
+}
+
+.gradient-btn:hover {
+    transform: scale(1.05)
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.home-content h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    line-height: 1;
+}
+
+.home-content h3 {
+    margin: 1rem 0;
+    font-size: 4rem;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.home-image img {
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 50px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+
+.home-image img:hover {
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 75px var(--main-color);
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: var(--text-color);
+    background-color: var(--main-color);
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.btn-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn-group a {
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3rem;
+    transition: 0.3s ease-in-out;
+    color: white;
+    border: 2px solid transparent;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+}
+
+.btn-group a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px black, 0 0 50px black;
+    color: var(--bg-color);
+}
+
+.btn-group a:nth-of-type(2) {
+    background-color: black;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: none; /* Prevent shadow when idle */
+}
+
+.btn-group a:nth-of-type(2):hover {
+    background-color: var(--main-color);
+    color: black;
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background-color: var(--second-bg-color);
+}
+
+.about-img {
+    width: 32vw;
+}
+
+.about-content h2 {
+    font-size: 5rem;
+    text-align: left;
+}
+
+.about-content p {
+    font-size: 1.8rem;
+}
+
+.about-content .btn {
+    margin: 3rem 0;
+}
+
+#more-text {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+}
+
+.heading {
+    text-align: center;
+    font-size: 7rem;
+    margin: 5rem 0;
+}
+
+.academics {
+    background-color: var(--bg-color);
+    color: black;
+}
+
+.academics h2 {
+    color: var(--text-color);
+}
+
+.academics-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+}
+
+.academics-box {
+    width: 30%; /* Adjust width */
+    min-width: 280px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    border-radius: 3rem;
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: 0.4s ease-in-out;
+    text-align: center;
+    flex-direction: column; /* Ensures content inside stacks properly */
+}
+
+.academics-box:hover {
+    background-color: var(--second-bg-color);
+    color: var(--main-color);
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+
+.academics-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.academics-info h4 {
+    font-size: 4rem;
+    margin: 2rem 0;
+    font-weight: 800;
+}
+
+.academics-info p {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.7;
+    color: white;
+}
+
+.academics-info h3 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.contact {
+    background-color: var(--second-bg-color);
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.contact form .input-box input,
+.contact form .input-box textarea {
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    margin: 1.5rem 0;
+    resize: none;
+}
+
+.footer {
+    background-color: var(--second-bg-color);
+    padding: 50px 0;
+}
+
+.footer .social-icons {
+    text-align: center;
+}
+
+.input-groups-2 {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 1.5rem; /* Add some space above */
+}
+
+.input-groups-2 textarea {
+    width: 100%; /* Full width */
+    padding: 1.5rem; /* Add padding */
+    font-size: 1.8rem; /* Font size */
+    color: var(--text-color); /* Text color */
+    background-color: var(--bg-color); /* Background color */
+    border: 2px solid var(--main-color); /* Border styling */
+    border-radius: 1rem; /* Rounded corners */
+    resize: none; /* Prevent resizing */
+    margin-bottom: 1rem; /* Space below the textarea */
+}
+
+.input-groups-2 input[type="submit"] {
+    padding: 1rem 2rem; /* Padding for the button */
+    font-size: 1.8rem; /* Font size */
+    color: white; /* Text color */
+    background-color: var(--main-color); /* Background color */
+    border: none; /* Remove default border */
+    border-radius: 1rem; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.input-groups-2 input[type="submit"]:hover {
+    background-color: darken(var(--main-color), 10%); /* Darken on hover */
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+@media (max-width: 1285px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3rem;
+        background: rgba(0, 0, 0, 0.8);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--text-color);
+    }
+    .navbar.active {
+        display: block;
+    }
+    .gradient-btn {
+        display: none;
+    }
+    .home {
+        flex-direction: column-reverse;
+        margin: 5rem 0;
+        gap: 5rem;
+    }
+    .home-content {
+        align-items: center;
+        text-align: center;
+    }
+    .home-image img {
+        width: 56vw;
+    }
+    .about {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .about h2 {
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .about img {
+        width: 52vw;
+    }
+    .contact form {
+        flex-direction: column;
+    }
+}
+@media(max-width: 768px) {
+    /* Make sure the "Read More" button is visible on mobile */
+    #read-more-btn {
+        display: block; /* Ensure button is visible */
+        text-align: center;
+    }
+
+    /* Optional: Adjust the text and content padding/margins */
+    .about-content p {
+        font-size: 1.6rem; /* Slightly smaller text for mobile */
+    }
+}
+/* General Section Styling */
+section {
+    margin-bottom: 20px;  /* Adjust margin-bottom to reduce space between sections */
+    padding-bottom: 20px;  /* Adjust padding if needed */
+}
+
+/* Optional: Fine-tune individual sections if needed */
+.home, .about, .academics, .contact {
+    margin-bottom: 20px;  /* Adjust space between sections */
+}
+
+/* Optional: If you want to reduce margin between specific elements */
+.home-content, .about-content {
+    margin-bottom: 10px; /* Adjust space within sections */
+}
+
+/* Media query for smaller screens (tablets, mobile, etc.) */
+@media (max-width: 1285px) {
+    section {
+        margin-bottom: 15px; /* Less space between sections on smaller screens */
+        padding-bottom: 15px;
+    }
+
+    .home-content, .about-content {
+        margin-bottom: 10px; /* Less space inside sections */
+    }
+}
+
+/* Fine-tuning for mobile-specific view (less than 768px width) */
+@media (max-width: 768px) {
+    section {
+        margin-bottom: 10px; /* Reduce space even further on mobile */
+        padding-bottom: 10px;
+    }
+
+    .home-content, .about-content {
+        margin-bottom: 5px; /* Less space inside sections for smaller screens */
+    }
+}
+
+/* Media query for mobile (less than 768px width) */
+@media (max-width: 768px) {
+    .about-img {
+        display: none; /* Hide the image on mobile */
+    }
+
+    /* Optionally, adjust other styles for mobile */
+    .about-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* Media query for mobile (less than 768px width) */
+@media (max-width: 768px) {
+    /* Hide the image on mobile */
+    .about-img {
+        display: none;
+    }
+
+    /* Reduce space between sections */
+    .about, .academics {
+        padding: 5rem 0; /* Reduce padding */
+    }
+
+    /* Adjust 'Academics' heading size */
+    .academics .heading {
+        font-size: 4rem; /* Smaller size for mobile */
+    }
+
+    /* Adjust font size and margins for the About section */
+    .about-content h2 {
+        font-size: 3.5rem; /* Reduce size */
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .about-content p {
+        font-size: 1.6rem; /* Reduce size for better readability */
+        margin-bottom: 1.5rem;
+    }
+
+    /* Optionally adjust the padding of the button */
+    .about .btn {
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+    }
+
+    /* Reduce size of academic box content */
+    .academics-box h3 {
+        font-size: 2rem; /* Reduce font size for better readability */
+    }
+
+    /* Adjust other general spacing */
+    .academics-container {
+        gap: 2rem; /* Reduce gap between items */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    /* Adjusting Read More Button for mobile */
+    #read-more-btn {
+        font-size: 1.6rem; /* Reduce font size */
+        padding: 1rem 2rem; /* Adjust padding for better height */
+        width: auto; /* Make the width auto to avoid stretching */
+        max-width: 200px; /* Set a max-width so it doesn't stretch too wide */
+        display: block; /* Ensures it's block-level on mobile */
+        margin: 0 auto; /* Center the button */
+        text-align: center; /* Center the text */
+        height: auto; /* Allow button to adjust its height dynamically */
+    }
+
+    .home {
+        gap: 3rem; /* Adjust gap to avoid large spaces */
+    }
+
+    .about .about-content {
+        padding: 0 2rem; /* Adjust padding for about section */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    /* Adjusting Contact Me Button for mobile */
+    .btn {
+        font-size: 1.4rem; /* Slightly smaller font size */
+        padding: 0.8rem 1.5rem; /* Adjusted padding for better proportion */
+        width: auto; /* Auto width so it doesn't stretch too much */
+        display: block; /* Make the button block-level */
+        margin: 0 auto; /* Center the button */
+        text-align: center; /* Center the text */
+        height: auto; /* Allow button to adjust its height dynamically */
+        max-width: 220px; /* Set max-width so it doesn't grow too wide */
+    }
+
+    /* Additional adjustments for spacing and layout */
+    .home {
+        gap: 3rem; /* Adjust gap to reduce space between elements */
+    }
+
+    .about .about-content {
+        padding: 0 2rem; /* Adjust padding in about section */
+    }
+
+    .contact form {
+        padding: 0 1rem; /* Adjust padding in the contact form */
+    }
+}
+
+/* Navbar specific styling */
+.header {
+    position: fixed;  /* Make the navbar fixed */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the navbar is always on top */
+}
+
+/* Add padding-top to the home section to avoid overlap with navbar */
+.home {
+    padding-top: 100px; /* Adjust this value based on the navbar height */
+    gap: 5rem;
+}
+
+/* Adjust padding for other sections to ensure they are properly spaced */
+section {
+    padding: 4rem 15%;
+    min-height: 100vh;
+}
+
+.about, .academics, .contact {
+    padding-top: 4rem; /* Keep the space consistent */
+}
+
+/* Mobile styling */
+@media (max-width: 768px) {
+    .home {
+        padding-top: 80px; /* Adjust for smaller screens */
+    }
+
+    section {
+        padding: 2rem 5%;
+    }
+
+    .about, .academics, .contact {
+        padding-top: 3rem;
+    }
+}
+
+/* Navbar specific styling */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the navbar is always on top */
+}
+
+/* Home section */
+.home {
+    padding-top: 100px; /* Keep this to avoid navbar overlap */
+    gap: 2rem; /* Reduced gap between elements */
+}
+
+/* Section padding */
+section {
+    padding: 2rem 15%; /* Reduced padding */
+    min-height: 80vh;  /* Reduced the height to tighten the sections */
+}
+
+/* Mobile styling */
+@media (max-width: 768px) {
+    .home {
+        padding-top: 80px; /* Adjusted padding for mobile */
+    }
+
+    section {
+        padding: 1.5rem 5%; /* Reduced padding for mobile */
+    }
+
+    .about, .academics, .contact {
+        padding-top: 2rem; /* Reduced top padding for mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    #more-text {
+        display: block !important; /* Ensures full text is always visible */
+        height: auto !important;  /* Removes any height restriction */
+    }
+    
+    #read-more-btn {
+        display: none !important; /* Hides the 'Read More' button on mobile */
+    }
+}
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Adjusts spacing between elements */
+}
+
+.hero-text {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adjusts spacing between social icons */
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjusts spacing between buttons */
+    margin-top: 20px;
+}
+
+.profile-image {
+    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.7);
+}
+
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* Reduce spacing */
+    margin-bottom: -30px; /* Bring the next section closer */
+}
+
+.hero-text {
+    margin-bottom: 5px; /* Reduce text spacing */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* Slightly reduce spacing between icons */
+    margin-bottom: 10px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Reduce button spacing */
+    margin-top: 10px;
+}
+
+.profile-image {
+    margin-top: 0px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.7);
+}
+
+/* Reduce space between hero and about me section */
+.about-section {
+    margin-top: -50px; /* Adjust negative margin */
+    padding-top: 0px; /* Reduce padding */
+}

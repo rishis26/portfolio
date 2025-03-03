@@ -122,8 +122,10 @@
                     <p>Dilip Mane Nagar, Khadgaon Ring Rd, <br> Ram Nagar, Latur, Maharashtra 413512</p>     
                 </div>
             </div>
+            
         </div>
     </section>
+
     <section class="contact" id="contact">
         <h2 class="heading">Contact<span> Me</span></h2>
         <form action="https://formsubmit.co/rishishah781@gmail.com" method="post">
@@ -132,15 +134,16 @@
             <div class="input-groups">
                 <div class="input-box">
                     <input type="text" name="Name" placeholder="Full Name">
-                    <input type="email" name="Email" placeholder="Email">
+                     <input type="email" name="Email" placeholder="Email">
                 </div>
                 <div class="input-box">
-                    <input type="number" name="Phone number" placeholder="Phone Number">
+                    <input type="text" name="phone" inputmode="numeric" pattern="\d*" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required / placeholder="Phone number
+                    ">
                     <input type="text" name="Subject" placeholder="Subject">
                 </div>
             </div>
             <div class="input-groups-2">
-                <textarea name="Message" placeholder="Your Message" cols="30" rows="10"></textarea>
+                <textarea name="Message" placeholder="Your Message" cols="50" rows="12"></textarea>
                 <input type="submit" value="Send Message" class="btn">
             </div>
         </form>

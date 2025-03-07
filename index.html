@@ -134,7 +134,7 @@
             <div class="input-groups">
                 <div class="input-box">
                     <input type="text" name="Name" placeholder="Full Name">
-                     <input type="email" name="Email" placeholder="Email">
+                    <input type="email" name="Email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                 </div>
                 <div class="input-box">
                     <input type="text" name="phone" inputmode="numeric" pattern="\d*" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required / placeholder="Phone number

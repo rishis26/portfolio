@@ -99,14 +99,27 @@
     color: #fff;
 }
 
-.light-mode .navbar {
-    background: #fff !important;
+@media (min-width: 769px) {
+  .light-mode .navbar {
+    background: transparent;
+  }
+  .light-mode .navbar a {
+    color: #000;
+  }
+  .light-mode .navbar a:hover {
+    color: #ea580c;
+  }
 }
-.light-mode .navbar a {
-    color: #000 !important;
-}
-.light-mode .navbar a:hover {
-    color: #ea580c !important;
+@media (max-width: 768px) {
+  .light-mode .navbar {
+    background: #fff;
+  }
+  .light-mode .navbar a {
+    color: #000;
+  }
+  .light-mode .navbar a:hover {
+    color: #ea580c;
+  }
 }
 
 .light-mode .about,

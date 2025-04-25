@@ -9,10 +9,188 @@
 
 :root {
     --bg-color: #000000;
-    --second-bg-color: #00000;
-    --text-color: white;
+    --second-bg-color: #000000;
+    --text-color: #ffffff;
     --main-color: #ea580c;
 }
+
+.light-mode {
+    --bg-color: #fff;
+    --second-bg-color: #fff;
+    --text-color: #000;
+    --main-color: #ea580c;
+}
+
+.light-mode .gradient-btn {
+    background: linear-gradient(90deg, #ff1d15 0%, #ea580c 100%);
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+.light-mode .gradient-btn:hover, .light-mode .gradient-btn:focus {
+    background: #fff;
+    color: #ea580c;
+    border: 2px solid #ea580c;
+}
+
+
+.light-mode .gradient-btn:hover, .light-mode .gradient-btn:focus {
+    background: #fff;
+    color: #ea580c;
+    border: 2px solid #ea580c;
+}
+
+.light-mode #mode-toggle {
+    background: linear-gradient(90deg, #ff1d15 0%, #ea580c 100%);
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+.light-mode #mode-toggle:hover, .light-mode #mode-toggle:focus {
+    background: #fff;
+    color: #ea580c;
+    border: none;
+}
+
+
+.light-mode #mode-toggle i {
+    color: #fff;
+}
+
+.light-mode #mode-toggle:hover, .light-mode #mode-toggle:focus {
+    background: #fff;
+    color: #ea580c;
+    border: 2px solid #ea580c;
+}
+
+.light-mode #mode-toggle:hover i, .light-mode #mode-toggle:focus i {
+    color: #ea580c;
+}
+
+.light-mode .gradient-btn:hover, .light-mode .gradient-btn:focus {
+    background: var(--main-color);
+    color: #fff;
+    border: 2px solid var(--main-color);
+}
+
+.light-mode #mode-toggle {
+    background: #fff;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+.light-mode #mode-toggle i {
+    color: var(--main-color);
+}
+
+.light-mode #mode-toggle:hover, .light-mode #mode-toggle:focus {
+    background: var(--main-color);
+    color: #fff;
+    border: 2px solid var(--main-color);
+}
+
+.light-mode #mode-toggle:hover i, .light-mode #mode-toggle:focus i {
+    color: #fff;
+}
+
+.light-mode .navbar a {
+    color: var(--text-color);
+}
+
+.light-mode .about,
+.light-mode .academics,
+.light-mode .footer,
+.light-mode section {
+    background-color: var(--second-bg-color) !important;
+}
+
+.light-mode .btn-group a,
+.light-mode .social-icons a {
+    color: var(--main-color);
+    background-color: var(--second-bg-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 10px #dbeafe;
+}
+
+.light-mode .btn-group a:hover,
+.light-mode .social-icons a:hover {
+    background-color: var(--main-color);
+    color: #fff;
+    box-shadow: 0 0 25px #60a5fa;
+}
+
+.light-mode .home-image img {
+    box-shadow: 0 0 40px #ea580c33;
+}
+
+.light-mode .academics-box {
+    background-color: var(--main-color);
+    color: #fff;
+    box-shadow: 0 4px 32px #fff2;
+    padding: 3rem 2rem;
+    border-radius: 3rem;
+    max-width: 95vw;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.light-mode .academics-box h4,
+.light-mode .academics-box h3 {
+    color: #fff;
+    font-weight: 800;
+    margin: 2rem 0 1rem 0;
+}
+
+.light-mode .academics-box p {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.light-mode .academics-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 40px #ea580c33;
+    background-color: #fff;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    transition: all 0.3s cubic-bezier(.4,2,.6,1);
+}
+
+.light-mode .academics-box:hover h3,
+.light-mode .academics-box:hover h4,
+.light-mode .academics-box:hover p {
+    color: var(--main-color) !important;
+}
+
+.light-mode .footer {
+    background-color: var(--second-bg-color);
+}
+
+.light-mode .contact form .input-box input,
+.light-mode .contact form .input-box textarea {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1.5px solid var(--main-color);
+}
+
+.light-mode .input-groups-2 textarea,
+.light-mode .input-groups-2 input[type="submit"] {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1.5px solid var(--main-color);
+}
+
+.light-mode .input-groups-2 input[type="submit"]:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
 
 html {
     font-size: 62.5%; /* Adjusted for better scaling */
@@ -133,7 +311,7 @@ section {
 .home-image img {
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 50px var(--main-color);
+    box-shadow: 0 0 32px 0 #ea580c22;
     transition: 0.4s ease-in-out;
 }
 

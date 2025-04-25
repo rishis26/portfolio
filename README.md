@@ -1,13 +1,12 @@
 # Rishi Shah Portfolio
 
-A modern, responsive, and mobile-friendly personal portfolio website for Rishi Shah. Built with HTML, CSS, and JavaScript, this project showcases projects, academics, and contact information, and features a seamless dark/light mode toggle with smooth animations.
+A modern, responsive, and mobile-friendly personal portfolio website for Rishi Shah. Built with HTML, CSS, and JavaScript, this project showcases projects, academics, and contact information, and features a seamless with smooth animations.
 
 ---
 
 ## 🚀 Features
 
 - **Mobile-First, Responsive Design**: Looks great on all devices (desktop, tablet, mobile).
-- **Dark/Light Mode**: Toggle between themes with a smooth animated transition.
 - **Accessible & Usable**: Large tap targets, readable fonts, and color contrast.
 - **Modern UI/UX**: Clean layout, soft shadows, and a limited, bold color palette (black, white, orange, accent red).
 - **Animated Mode Toggle**: The mode toggle button animates on click for a delightful user experience.
@@ -20,7 +19,7 @@ A modern, responsive, and mobile-friendly personal portfolio website for Rishi S
 ```
 portfolio/
 ├── index.html        # Main HTML file
-├── style.css         # All styles (light/dark mode, responsive, animations)
+├── style.css         # All styles (responsive, animations)
 ├── script.js         # JS for menu toggle, mode toggle, and animations
 ├── image.png         # Profile image (replace with your own)
 ├── image1.png        # About section image (replace as needed)
@@ -54,13 +53,6 @@ portfolio/
 
 ## 📱 Mobile Experience
 - The site is fully responsive and optimized for mobile.
-- The dark/light mode toggle is always visible and easy to tap on mobile.
-
----
-
-## 🌓 Dark/Light Mode
-- Click the sun/moon icon in the header to toggle between light and dark mode.
-- The transition is animated for a smooth visual experience.
 
 ---
 

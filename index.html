@@ -7,7 +7,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="light-mode">
+<body>
     <header class="header">
         <a href="#home" class="logo">
             Rishi <span>Shah</span>
@@ -21,7 +21,6 @@
             <a href="#projects">Projects</a>
         </nav>
         <a href="#contact" class="gradient-btn">Contact Me </a>
-        <button id="mode-toggle" class="gradient-btn" style="margin-left: 2rem;"><i class='bx bx-moon'></i></button>
     </header>
 
     <section class="home" id="home">
@@ -63,7 +62,7 @@
     </section>
 
     <section class="about" id="about">
-        <about class="about">
+        <div class="about">
             <img src="image1.png" alt="" class="about-img">
     
             <div class="about-content">
@@ -168,17 +167,6 @@
             © Rishi shah | All rights are Reserved
         </p>
     </footer>
-<script>
-const modeToggle = document.getElementById('mode-toggle');
-const body = document.body;
-let darkMode = false;
-modeToggle.innerHTML = "<i class='bx bx-sun'></i>";
-modeToggle.addEventListener('click', function() {
-  darkMode = !darkMode;
-  body.classList.toggle('light-mode');
-  modeToggle.innerHTML = darkMode ? "<i class='bx bx-moon'></i>" : "<i class='bx bx-sun'></i>";
-});
-</script>
-<script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>

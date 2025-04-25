@@ -99,8 +99,14 @@
     color: #fff;
 }
 
+.light-mode .navbar {
+    background: #fff !important;
+}
 .light-mode .navbar a {
-    color: var(--text-color);
+    color: #000 !important;
+}
+.light-mode .navbar a:hover {
+    color: #ea580c !important;
 }
 
 .light-mode .about,

@@ -9,9 +9,18 @@
 
 :root {
     --bg-color: #000000;
-    --second-bg-color: #00000;
+    --second-bg-color: #000000;
     --text-color: white;
     --main-color: #ea580c;
+    --header-bg-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --second-bg-color: #f5f5f5;
+    --text-color: #000000;
+    --main-color: #ea580c;
+    --header-bg-color: #ffffff;
 }
 
 html {
@@ -31,7 +40,7 @@ body {
     top: 0;
     left: 0;
     padding: 4rem 15%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--header-bg-color, var(--bg-color));
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -289,6 +298,17 @@ section {
     color: var(--main-color);
     border: 5px solid var(--main-color);
     transform: scale(1.03);
+}
+
+[data-theme='light'] .academics-box:hover {
+    background-color: #fff;
+    color: var(--main-color);
+}
+
+[data-theme='light'] .academics-info p,
+[data-theme='light'] .academics-info h3,
+[data-theme='light'] .academics-info h4 {
+    color: var(--main-color) !important;
 }
 
 .academics-info {
@@ -771,4 +791,56 @@ section {
 .about-section {
     margin-top: -50px; /* Adjust negative margin */
     padding-top: 0px; /* Reduce padding */
+}
+
+/* Add theme toggle button styles */
+.theme-toggle {
+    font-size: 2.4rem;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-left: 2rem;
+    transition: 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+    color: var(--main-color);
+    transform: rotate(30deg);
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+@media (max-width: 1285px) {
+    .header-icons {
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1100;
+    }
+    .navbar {
+        top: 100%;
+        right: 0;
+        left: auto;
+        width: 60vw;
+        min-width: 180px;
+        max-width: 320px;
+    }
+    .theme-toggle {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-icons {
+        right: 1rem;
+    }
+    .navbar {
+        width: 80vw;
+        min-width: 120px;
+        max-width: 95vw;
+    }
 }

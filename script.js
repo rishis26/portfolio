@@ -22,3 +22,20 @@ if (menuIcon && navbar) {
         navbar.classList.toggle('active');
     };
 }
+
+// Theme switching functionality
+const themeToggle = document.getElementById('theme-toggle');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Set default theme to light unless user has a saved preference
+const currentTheme = localStorage.getItem('theme') || 'light';
+
+document.documentElement.setAttribute('data-theme', currentTheme);
+themeToggle.className = currentTheme === 'dark' ? 'bx bx-sun theme-toggle' : 'bx bx-moon theme-toggle';
+
+themeToggle.addEventListener('click', () => {
+    const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    themeToggle.className = newTheme === 'dark' ? 'bx bx-sun theme-toggle' : 'bx bx-moon theme-toggle';
+});

@@ -39,3 +39,22 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme);
     themeToggle.className = newTheme === 'dark' ? 'bx bx-sun theme-toggle' : 'bx bx-moon theme-toggle';
 });
+
+// Shrinking header on scroll
+const header = document.querySelector('.header');
+let ticking = false;
+let isShrunk = false;
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            const shouldShrink = window.scrollY > 10;
+            if (shouldShrink !== isShrunk) {
+                header.classList.toggle('header--shrink', shouldShrink);
+                isShrunk = shouldShrink;
+            }
+            ticking = false;
+        });
+        ticking = true;
+    }
+}, { passive: true });
